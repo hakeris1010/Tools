@@ -1,6 +1,11 @@
 /*Windows Console UI v1.0 by H3nt4iBoY (C) 2015
-- Main Header
-- Features color changer, writing in specific positions
+- Features: color changer
+- writing in specific positions
+- Manipulating console cursor coordinates
+- Custom input function, using several methods
+- Sleep function
+
+* Main Header
 */
 
 #ifndef UIMAKER_H_INCLUDED

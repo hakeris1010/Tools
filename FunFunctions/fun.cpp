@@ -151,7 +151,7 @@ bool Fun::findText(std::string mainStr, std::string textToSearch, int where)
     return cool;
 }
 
-std::string Fun::getTimeString()
+std::string Fun::getTimeString(std::string mode)
 {
     time_t tim;
     struct tm * taim;
@@ -160,7 +160,7 @@ std::string Fun::getTimeString()
     time(&tim);
     taim = localtime(&tim);
 
-    strftime(stime,80,"%x %X", taim);
+    strftime(stime, 80, mode, taim);
 
     return (std::string)stime;
 }

@@ -35,7 +35,7 @@ public:
     static void reverseDouble(double & num);
     static bool findTextComplex(std::string mainStr, std::string text, int where);
     static bool findText(std::string mainStr, std::string textToSearch, int where);
-    static std::string getTimeString();
+    static std::string getTimeString(std::string mode = "%x %X");
 };
 
 template <typename T> std::string Fun::toString(T const& a)
