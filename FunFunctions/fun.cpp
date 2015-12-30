@@ -160,9 +160,55 @@ std::string Fun::getTimeString(std::string mode)
     time(&tim);
     taim = localtime(&tim);
 
-    strftime(stime, 80, mode, taim);
+    strftime(stime, 80, mode.c_str(), taim);
 
     return (std::string)stime;
 }
+
+std::string Fun::reverseString(std::string str)
+{
+    std::string zum;
+    for(int i=str.size()-1; i>=0; i--) zum.push_back(str[i]);
+    return zum;
+}
+
+std::string Fun::getFileExtension(std::string filename)
+{
+    std::string temp;
+    bool dotFound=false;
+
+    for(int i=filename.size()-1; i>=0; i--)
+    {
+        if(filename[i]=='.')
+        {
+            dotFound=true;
+            break;
+        }
+        temp.push_back(filename[i]);
+    }
+
+    if(dotFound) return reverseString(temp);
+    return " ";
+}
+
+std::vector<std::string> Fun::stringToWordArray(std::string str)
+{
+    std::vector<std::string> woot;
+    std::string tempo;
+
+    for(int i=0; i<str.size(); i++)
+    {
+        if(str[i] != char(32)) tempo.push_back(str[i]);
+
+        if(((str[i] == char(32)) || i==str.size()-1) && tempo.size()>0)
+        {
+            woot.push_back(tempo);
+            tempo.clear();
+        }
+    }
+
+    return woot;
+}
+
 
 //end;

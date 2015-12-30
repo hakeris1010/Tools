@@ -17,6 +17,7 @@
 #include <sstream>
 #include <cmath>
 #include <iomanip>
+#include <vector>
 
 
 class Fun
@@ -36,6 +37,9 @@ public:
     static bool findTextComplex(std::string mainStr, std::string text, int where);
     static bool findText(std::string mainStr, std::string textToSearch, int where);
     static std::string getTimeString(std::string mode = "%x %X");
+    static std::string getFileExtension(std::string filename);
+    static std::string reverseString(std::string str);
+    static std::vector<std::string> stringToWordArray(std::string str);
 };
 
 template <typename T> std::string Fun::toString(T const& a)
