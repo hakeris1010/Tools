@@ -1,4 +1,4 @@
-/* Debugger by H3nt4iBoY v1.1
+/* Debugger by H3nt4iBoY v1.2
 - Everything in one .h
 - Supports 3 modes: file, screen, no debug.
 - Can be switched in runtime
